@@ -71,7 +71,16 @@ while len(fibsList) < numFibs:
 print(fibsList)
 
 # iterate over the last five numbers to build another list with the ratio of each number to its predecessor
-for num in fibsList
+numRatios = 5
+ratioList = []
+for i in range(numFibs - numRatios, numFibs):
+    print(i)
+    ratioList.append(fibsList[i] / fibsList[i-1])
+
+print(ratioList)
+
+
+
 
 
 
