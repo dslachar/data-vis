@@ -13,10 +13,11 @@ df_elements.loc[len(df_elements)]=['Neon','Ne', 10]
 # add a column with the atomic weights rounded to the nearest inetger
 df_elements['atomic_weight'] = ['1','4','7','9','11','12','14','16','19','20']
 
-#print('-----------------------PART 1-----------------------')
-#print(df_elements)
+print('-----------------------PART 1-----------------------')
+print(df_elements)
 
 #Part2
+print('-----------------------PART 2-----------------------')
 #Make a list of strings for nine Greek letters, ‘alpha’, for example.
 #Make that list such that they are not in alphabetic order
 greekLetters = ['delta','alpha','phi','iota','lambda',
@@ -46,9 +47,18 @@ dict = d = {'Letter':greekLetters,
 df_letters = pd.DataFrame(dict)
 print(df_letters)
 
-#Sort the DataFrame ascending on the Greek letters, drop two columns of your
-#choice, drop one of the rows, and print that out
-sorted_df = 
+#Sort the DataFrame ascending on the Greek letters,
+trimmed_df = df_letters.sort_values(by=['Letter'])
+
+#drop two columns of yourchoice
+trimmed_df.drop(['Random_2', 'Cosine'], axis=1, inplace=True)
+
+#drop one of the rows
+trimmed_df.drop(trimmed_df[trimmed_df['Letter'] == 'eta'].index, inplace=True)
+
+#and print that out
+print(trimmed_df)
+
 
 
 
