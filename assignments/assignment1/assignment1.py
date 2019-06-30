@@ -87,17 +87,18 @@ print('-----------------------PART 4-----------------------')
 
 
 def kelvin_to_rankin(K):
-    return K * 1.8000
+    return K * 1.8
 
 
 # Make a list of five Kelvin temperatures and print out their values in Rankine
 kelvinTemps = [0, 223, 283, 333, 373]
 print(kelvinTemps)
-rankinTemps = [kelvin_to_rankin(K) for K in kelvinTemps]
-print(rankinTemps)
+rankinTemps1 = [kelvin_to_rankin(K) for K in kelvinTemps]
+print(rankinTemps1)
 
 # Repeat using a lambda function.
-
+rankinTemps2 = list(map(lambda x: x * 1.8, kelvinTemps))
+print(rankinTemps2)
 
 
 
