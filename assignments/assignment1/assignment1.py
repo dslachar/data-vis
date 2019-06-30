@@ -1,3 +1,5 @@
+# David LaCharite
+
 import numpy as np
 import pandas as pd
 import math
@@ -14,7 +16,7 @@ df_elements.loc[len(df_elements)]=['Neon','Ne', 10]
 # add a column with the atomic weights rounded to the nearest inetger
 df_elements['atomic_weight'] = ['1','4','7','9','11','12','14','16','19','20']
 
-print('-----------------------PART 1-----------------------')
+
 print(df_elements)
 
 # Part2
@@ -61,7 +63,7 @@ trimmed_df.drop(trimmed_df[trimmed_df['Letter'] == 'eta'].index, inplace=True)
 print(trimmed_df)
 
 # Part 3
-print('-----------------------PART 2-----------------------')
+print('-----------------------PART 3-----------------------')
 # Write a program in Python to create and print out the first twelve Fibonacci numbers
 numFibs = 12
 fibsList = [0, 1]
@@ -74,13 +76,27 @@ print(fibsList)
 numRatios = 5
 ratioList = []
 for i in range(numFibs - numRatios, numFibs):
-    print(i)
     ratioList.append(fibsList[i] / fibsList[i-1])
 
 print(ratioList)
 
+# Part 4
+print('-----------------------PART 4-----------------------')
+
+# Provide a function that converts temperature in Kelvin to Rankine
 
 
+def kelvin_to_rankin(K):
+    return K * 1.8000
+
+
+# Make a list of five Kelvin temperatures and print out their values in Rankine
+kelvinTemps = [0, 223, 283, 333, 373]
+print(kelvinTemps)
+rankinTemps = [kelvin_to_rankin(K) for K in kelvinTemps]
+print(rankinTemps)
+
+# Repeat using a lambda function.
 
 
 
