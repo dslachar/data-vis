@@ -53,7 +53,7 @@ print(df_letters)
 # Sort the DataFrame ascending on the Greek letters,
 trimmed_df = df_letters.sort_values(by=['Letter'])
 
-# drop two columns of yourchoice
+# drop two columns of your choice
 trimmed_df.drop(['Random_2', 'Cosine'], axis=1, inplace=True)
 
 # drop one of the rows
@@ -79,6 +79,9 @@ for i in range(numFibs - numRatios, numFibs):
     ratioList.append(fibsList[i] / fibsList[i-1])
 
 print(ratioList)
+
+# What do you observe about this latter list?
+#The latter list is a convergent sequence with a limit of 1.618 which is  ≈  the Golden Ratio.
 
 # Part 4
 print('-----------------------PART 4-----------------------')
