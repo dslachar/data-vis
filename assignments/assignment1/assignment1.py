@@ -40,14 +40,14 @@ angle = np.random.uniform(range_low, range_high, NPTS)
 cosine = [math.cos(x) for x in angle]
 
 # Construct a dictionary from all of the above
-dict = d = {'Letter':greekLetters,
-            'Random_1':random1,
-            'Random_2':random2,
-            'Angle' : angle,
-            'Cosine' : cosine}
+d = {'Letter':greekLetters,
+     'Random_1':random1,
+     'Random_2':random2,
+     'Angle' : angle,
+     'Cosine' : cosine}
 
 # Form a DataFrame from that dictionary and print it out
-df_letters = pd.DataFrame(dict)
+df_letters = pd.DataFrame(d)
 print(df_letters)
 
 # Sort the DataFrame ascending on the Greek letters,
